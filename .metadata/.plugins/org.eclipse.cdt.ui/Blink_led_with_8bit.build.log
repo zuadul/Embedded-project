@@ -1,0 +1,42 @@
+15:34:16 **** Build of configuration Release for project Blink_led_with_8bit ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Blink_led_with_8bit.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Blink_led_with_8bit.map -mmcu=atmega328p -o "Blink_led_with_8bit.elf"  ./main.o   
+Finished building target: Blink_led_with_8bit.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Blink_led_with_8bit.elf  >"Blink_led_with_8bit.lss"
+Finished building: Blink_led_with_8bit.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Blink_led_with_8bit.elf  "Blink_led_with_8bit.hex"
+Finished building: Blink_led_with_8bit.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Blink_led_with_8bit.elf  "Blink_led_with_8bit.eep"
+Finished building: Blink_led_with_8bit.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Blink_led_with_8bit.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     186 bytes (0.6% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:34:16 Build Finished. 0 errors, 0 warnings. (took 423ms)
+

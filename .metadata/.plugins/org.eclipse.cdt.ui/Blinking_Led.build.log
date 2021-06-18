@@ -1,0 +1,20 @@
+15:02:23 **** Incremental Build of configuration Release for project Blinking_Led ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Blinking_Led.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     164 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:02:23 Build Finished. 0 errors, 0 warnings. (took 84ms)
+

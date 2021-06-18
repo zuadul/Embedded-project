@@ -1,0 +1,20 @@
+13:59:27 **** Incremental Build of configuration Release for project USART+LED ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p USART+LED.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    4734 bytes (14.4% Full)
+(.text + .data + .bootloader)
+
+Data:        124 bytes (6.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+13:59:27 Build Finished. 0 errors, 0 warnings. (took 71ms)
+

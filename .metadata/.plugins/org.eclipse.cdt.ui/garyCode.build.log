@@ -1,0 +1,20 @@
+22:16:59 **** Incremental Build of configuration Release for project garyCode ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p garyCode.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     262 bytes (0.8% Full)
+(.text + .data + .bootloader)
+
+Data:         64 bytes (3.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:16:59 Build Finished. 0 errors, 0 warnings. (took 69ms)
+

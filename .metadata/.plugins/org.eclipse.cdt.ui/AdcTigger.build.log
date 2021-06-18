@@ -1,0 +1,20 @@
+18:44:32 **** Incremental Build of configuration Release for project AdcTigger ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p AdcTigger.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    2660 bytes (8.1% Full)
+(.text + .data + .bootloader)
+
+Data:         30 bytes (1.5% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:44:32 Build Finished. 0 errors, 0 warnings. (took 75ms)
+

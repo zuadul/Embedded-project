@@ -1,0 +1,31 @@
+21:23:36 **** Incremental Build of configuration Release for project sun ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function ‘motor1’:
+../main.c:107:16: warning: comparison of constant ‘512’ with boolean expression is always false [-Wbool-compare]
+   while(!result==512){
+                ^
+../main.c:107:16: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+../main.c: In function ‘motor2’:
+../main.c:124:18: warning: comparison of constant ‘512’ with boolean expression is always false [-Wbool-compare]
+     while(!result==512){
+                  ^
+../main.c:124:18: warning: logical not is only applied to the left hand side of comparison [-Wlogical-not-parentheses]
+subdir.mk:18: recipe for target 'main.o' failed
+../main.c: In function ‘motor1’:
+../main.c:138:5: warning: ‘main’ is normally a non-static function [-Wmain]
+ int main()
+     ^
+../main.c:162:1: error: expected declaration or statement at end of input
+ }
+ ^
+../main.c: In function ‘USART_send’:
+../main.c:61:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [main.o] Error 1
+
+21:23:36 Build Failed. 3 errors, 6 warnings. (took 65ms)
+

@@ -1,0 +1,20 @@
+01:50:31 **** Incremental Build of configuration Release for project commandLine ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p commandLine.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    7884 bytes (24.1% Full)
+(.text + .data + .bootloader)
+
+Data:       1348 bytes (65.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:50:31 Build Finished. 0 errors, 0 warnings. (took 124ms)
+

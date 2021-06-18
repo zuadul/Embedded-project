@@ -1,0 +1,42 @@
+12:52:20 **** Build of configuration Release for project PullUpPushButtonLed ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: PullUpPushButtonLed.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,PullUpPushButtonLed.map -mmcu=atmega328p -o "PullUpPushButtonLed.elf"  ./main.o   
+Finished building target: PullUpPushButtonLed.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S PullUpPushButtonLed.elf  >"PullUpPushButtonLed.lss"
+Finished building: PullUpPushButtonLed.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex PullUpPushButtonLed.elf  "PullUpPushButtonLed.hex"
+Finished building: PullUpPushButtonLed.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex PullUpPushButtonLed.elf  "PullUpPushButtonLed.eep"
+Finished building: PullUpPushButtonLed.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p PullUpPushButtonLed.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     152 bytes (0.5% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+12:52:21 Build Finished. 0 errors, 0 warnings. (took 940ms)
+

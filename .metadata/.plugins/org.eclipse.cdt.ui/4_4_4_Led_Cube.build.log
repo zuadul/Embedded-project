@@ -1,0 +1,46 @@
+15:45:53 **** Incremental Build of configuration Release for project 4*4*4_Led_Cube ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+In file included from ../main.c:10:0:
+/usr/lib/avr/include/avr/delay.h:36:2: warning: #warning "This file has been moved to <util/delay.h>." [-Wcpp]
+ #warning "This file has been moved to <util/delay.h>."
+  ^
+Finished building: ../main.c
+ 
+Building target: 4*4*4_Led_Cube.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,4*4*4_Led_Cube.map -mmcu=atmega328p -o "4*4*4_Led_Cube.elf"  ./main.o   
+Finished building target: 4*4*4_Led_Cube.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S 4*4*4_Led_Cube.elf  >"4*4*4_Led_Cube.lss"
+Finished building: 4*4*4_Led_Cube.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex 4*4*4_Led_Cube.elf  "4*4*4_Led_Cube.hex"
+Finished building: 4*4*4_Led_Cube.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex 4*4*4_Led_Cube.elf  "4*4*4_Led_Cube.eep"
+Finished building: 4*4*4_Led_Cube.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p 4*4*4_Led_Cube.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    2904 bytes (8.9% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+15:45:53 Build Finished. 0 errors, 1 warnings. (took 297ms)
+

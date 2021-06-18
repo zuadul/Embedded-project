@@ -1,0 +1,14 @@
+00:11:22 **** Incremental Build of configuration Release for project Conveyor ****
+make all 
+Building target: Conveyor.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Conveyor.map -mmcu=atmega328p -o "Conveyor.elf"  ./main.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x24): undefined reference to `motor_enable'
+main.c:(.text.startup.main+0x2c): undefined reference to `motor_enable'
+collect2: error: ld returned 1 exit status
+makefile:50: recipe for target 'Conveyor.elf' failed
+make: *** [Conveyor.elf] Error 1
+
+00:11:23 Build Failed. 2 errors, 0 warnings. (took 66ms)
+

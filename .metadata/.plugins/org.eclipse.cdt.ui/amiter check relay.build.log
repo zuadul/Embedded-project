@@ -1,0 +1,12 @@
+10:37:49 **** Incremental Build of configuration Release for project amiter check relay ****
+make all 
+Building target: amiter check relay.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,amiter check relay.map -mmcu=atmega328p -o "amiter check relay.elf"  ./main.o   
+avr-gcc: error: check: No such file or directory
+avr-gcc: error: relay.map: No such file or directory
+makefile:50: recipe for target 'amiter check relay.elf' failed
+make: *** [amiter check relay.elf] Error 1
+
+10:37:49 Build Failed. 2 errors, 0 warnings. (took 64ms)
+

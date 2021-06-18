@@ -1,0 +1,30 @@
+17:44:42 **** Incremental Build of configuration Release for project ConveyorBelt ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c:20:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ init_motor()
+ ^
+../main.c: In function ‘main’:
+../main.c:54:9: warning: implicit declaration of function ‘motor_enable’ [-Wimplicit-function-declaration]
+         motor_enable(left_motor_EN);
+         ^
+../main.c: In function ‘init_motor’:
+../main.c:24:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../main.c
+ 
+Building target: ConveyorBelt.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,ConveyorBelt.map -mmcu=atmega328p -o "ConveyorBelt.elf"  ./main.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x24): undefined reference to `motor_enable'
+main.c:(.text.startup.main+0x2c): undefined reference to `motor_enable'
+collect2: error: ld returned 1 exit status
+make: *** [ConveyorBelt.elf] Error 1
+makefile:50: recipe for target 'ConveyorBelt.elf' failed
+
+17:44:42 Build Failed. 2 errors, 3 warnings. (took 127ms)
+

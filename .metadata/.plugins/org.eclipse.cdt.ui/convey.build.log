@@ -1,0 +1,20 @@
+12:20:13 **** Incremental Build of configuration Release for project convey ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p convey.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:     230 bytes (0.7% Full)
+(.text + .data + .bootloader)
+
+Data:          0 bytes (0.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+12:20:13 Build Finished. 0 errors, 0 warnings. (took 69ms)
+

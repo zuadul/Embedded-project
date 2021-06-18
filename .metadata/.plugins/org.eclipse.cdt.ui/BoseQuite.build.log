@@ -1,0 +1,26 @@
+01:06:31 **** Build of configuration Release for project BoseQuite ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+../main.c: In function ‘music’:
+../main.c:30:7: warning: unused variable ‘playing’ [-Wunused-variable]
+  bool playing = true;
+       ^
+../main.c: In function ‘main’:
+../main.c:49:4: warning: implicit declaration of function ‘call’ [-Wimplicit-function-declaration]
+    call();
+    ^
+Finished building: ../main.c
+ 
+Building target: BoseQuite.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,BoseQuite.map -mmcu=atmega328p -o "BoseQuite.elf"  ./main.o   
+./main.o: In function `main':
+main.c:(.text.startup.main+0x1c): undefined reference to `call'
+collect2: error: ld returned 1 exit status
+makefile:50: recipe for target 'BoseQuite.elf' failed
+make: *** [BoseQuite.elf] Error 1
+
+01:06:31 Build Failed. 2 errors, 2 warnings. (took 118ms)
+

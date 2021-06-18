@@ -1,0 +1,20 @@
+19:31:13 **** Incremental Build of configuration Release for project usart ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p usart.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    4734 bytes (14.4% Full)
+(.text + .data + .bootloader)
+
+Data:        124 bytes (6.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+19:31:13 Build Finished. 0 errors, 0 warnings. (took 83ms)
+

@@ -1,0 +1,20 @@
+01:55:03 **** Incremental Build of configuration Release for project led_4cube ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p led_4cube.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    3312 bytes (10.1% Full)
+(.text + .data + .bootloader)
+
+Data:         40 bytes (2.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:55:03 Build Finished. 0 errors, 0 warnings. (took 67ms)
+

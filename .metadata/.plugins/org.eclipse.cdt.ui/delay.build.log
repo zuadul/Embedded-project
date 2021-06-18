@@ -1,0 +1,20 @@
+19:31:28 **** Incremental Build of configuration Release for project delay ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p delay.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    6132 bytes (18.7% Full)
+(.text + .data + .bootloader)
+
+Data:        336 bytes (16.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+19:31:28 Build Finished. 0 errors, 0 warnings. (took 67ms)
+

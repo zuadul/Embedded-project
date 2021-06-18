@@ -1,0 +1,20 @@
+00:23:44 **** Incremental Build of configuration Release for project WeakSignal ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p WeakSignal.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    2656 bytes (8.1% Full)
+(.text + .data + .bootloader)
+
+Data:         32 bytes (1.6% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+00:23:44 Build Finished. 0 errors, 0 warnings. (took 75ms)
+

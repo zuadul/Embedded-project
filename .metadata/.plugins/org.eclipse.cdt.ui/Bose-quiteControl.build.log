@@ -1,0 +1,42 @@
+01:10:09 **** Incremental Build of configuration Release for project Bose-quiteControl ****
+make all 
+Building file: ../main.c
+Invoking: AVR Compiler
+avr-gcc -Wall -Os -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega328p -DF_CPU=16000000UL -MMD -MP -MF"main.d" -MT"main.o" -c -o "main.o" "../main.c"
+Finished building: ../main.c
+ 
+Building target: Bose-quiteControl.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Bose-quiteControl.map -mmcu=atmega328p -o "Bose-quiteControl.elf"  ./main.o   
+Finished building target: Bose-quiteControl.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Bose-quiteControl.elf  >"Bose-quiteControl.lss"
+Finished building: Bose-quiteControl.lss
+ 
+Create Flash image (ihex format)
+avr-objcopy -R .eeprom -R .fuse -R .lock -R .signature -O ihex Bose-quiteControl.elf  "Bose-quiteControl.hex"
+Finished building: Bose-quiteControl.hex
+ 
+Create eeprom image (ihex format)
+avr-objcopy -j .eeprom --no-change-warnings --change-section-lma .eeprom=0 -O ihex Bose-quiteControl.elf  "Bose-quiteControl.eep"
+Finished building: Bose-quiteControl.eep
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega328p Bose-quiteControl.elf
+AVR Memory Usage
+----------------
+Device: atmega328p
+
+Program:    2584 bytes (7.9% Full)
+(.text + .data + .bootloader)
+
+Data:         63 bytes (3.1% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+01:10:10 Build Finished. 0 errors, 0 warnings. (took 216ms)
+
